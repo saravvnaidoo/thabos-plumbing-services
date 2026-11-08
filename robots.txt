@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://wede5020-g1-2026-summative-1-portfolio-saravvnaidoo.vercel.app/sitemap.xml

@@ -1,0 +1,966 @@
+/* Thabo's Plumbing Services
+   WEDE5020 Part 2 - Saravan Naidoo (ST10510632) */
+
+/* Roboto, like I said in the proposal */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+/* Colours, spacing and shadows are all set here once.
+   If I want to change the look I only change these. */
+:root {
+  --navy: #0b3c5d;
+  --navy-light: #1d5f8a;
+  --blue: #1d6fd6;
+  --blue-dark: #1457b2;
+  --bg: #f8f9fa;
+  --grey: #e9ecef;
+  --grey-200: #edf2f6;
+  --border: #d5dbe1;
+  --text: #1f2933;
+  --text-light: #4a5560;
+  --white: #ffffff;
+  --focus: #ffb703;
+
+  --font: "Roboto", "Segoe UI", Arial, sans-serif;
+
+  --s1: 0.5rem;
+  --s2: 0.75rem;
+  --s3: 1.25rem;
+  --s4: 2rem;
+  --s5: 3rem;
+
+  --radius: 0.5rem;
+  --shadow: 0 1px 3px rgba(11, 60, 93, 0.12);
+  --shadow-big: 0 6px 18px rgba(11, 60, 93, 0.16);
+}
+
+/* reset so every browser starts the same */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font);
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text);
+  background-color: var(--bg);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+/* images shrink to fit their box and never stretch past it */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* ---------- text ---------- */
+
+/* each heading size is roughly 1.25 times the one below it */
+h1,
+h2,
+h3 {
+  color: var(--navy);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: var(--s2);
+}
+
+h1 {
+  font-size: 2.441rem;
+  letter-spacing: -0.01em;
+}
+
+h2 {
+  font-size: 1.953rem;
+  letter-spacing: -0.01em;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+p {
+  color: var(--text-light);
+  margin-bottom: var(--s3);
+  max-width: 65ch;
+}
+
+label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  margin-bottom: 0.3em;
+}
+
+.label-note {
+  font-weight: 400;
+}
+
+/* ---------- page layout ---------- */
+
+.container {
+  width: 90%;
+  max-width: 68.75rem;
+  margin: 0 auto;
+}
+
+.section {
+  padding: var(--s5) 0;
+}
+
+.section-alt {
+  background-color: var(--grey);
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: var(--s4);
+}
+
+/* p has a max-width so it needs auto margins to stay centred */
+.section-heading p {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ---------- header and nav ---------- */
+
+.site-header {
+  background-color: var(--navy);
+  padding: var(--s1) 0;
+  box-shadow: var(--shadow-big);
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--s3);
+}
+
+.brand img {
+  height: 2.5rem;
+  width: auto;
+}
+
+.nav-list {
+  display: flex;
+  gap: var(--s1);
+}
+
+.nav-list a {
+  display: block;
+  color: var(--white);
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 0.3rem;
+  transition: background-color 0.2s;
+}
+
+/* The menu button only matters on phones, so it is hidden everywhere else.
+   The mobile section at the bottom shows it again. */
+.menu-toggle {
+  display: none;
+}
+
+/* ---------- buttons ---------- */
+
+.button,
+.button-secondary {
+  display: inline-block;
+  padding: 0.7rem 1.4rem;
+  border-radius: 0.3rem;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.2s, box-shadow 0.2s, transform 0.1s;
+}
+
+.button {
+  background-color: var(--blue);
+  color: var(--white);
+  border: 2px solid var(--blue);
+}
+
+.button-secondary {
+  background-color: var(--white);
+  color: var(--navy);
+  border: 2px solid var(--border);
+}
+
+/* ---------- hero ---------- */
+
+.hero {
+  background-color: var(--white);
+  padding: var(--s5) 0;
+  border-bottom: 1px solid var(--border);
+}
+
+/* grid with named areas, text on the left and the card on the right.
+   The tablet media query below stacks them. */
+.hero-inner {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  grid-template-areas: "main side";
+  gap: var(--s4);
+  align-items: start;
+}
+
+.hero-inner > div {
+  grid-area: main;
+}
+
+.hero-card {
+  grid-area: side;
+  background-color: var(--bg);
+  padding: var(--s3);
+  border-radius: var(--radius);
+  border-left: 0.25rem solid var(--navy);
+  box-shadow: var(--shadow);
+}
+
+.hero-card-kicker {
+  display: block;
+  color: var(--navy-light);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  margin-bottom: 0.25rem;
+}
+
+.hero-card-list {
+  margin-top: var(--s2);
+}
+
+.hero-card-list li {
+  display: flex;
+  align-items: center;
+  gap: var(--s1);
+  margin-bottom: var(--s2);
+}
+
+.hero-check svg {
+  width: 1rem;
+  height: 1rem;
+  fill: var(--navy);
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s2);
+  margin-top: var(--s3);
+}
+
+.hero-media img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  margin-top: var(--s3);
+  border-radius: var(--radius);
+}
+
+/* ---------- cards and galleries ---------- */
+
+/* Three equal columns on desktop and tablet. I used to have auto-fit here,
+   but at some widths it gave 4 columns, which left two orphan cards on the
+   services page. Three fixed columns always fill the rows for 3 or 6 cards.
+   The mobile section drops this to one column. */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--s3);
+}
+
+.info-card {
+  background-color: var(--white);
+  padding: var(--s3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.card-image {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 0.3rem;
+  margin-bottom: var(--s2);
+}
+
+.about-media img {
+  width: 100%;
+  aspect-ratio: 21 / 9;
+  object-fit: cover;
+  border-radius: var(--radius);
+  margin-bottom: var(--s3);
+}
+
+.mini-gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--s2);
+  margin: var(--s3) 0;
+}
+
+.mini-gallery img {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  border-radius: 0.4rem;
+}
+
+/* ---------- contact page and forms ---------- */
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--s4);
+  align-items: start;
+}
+
+.contact-photo-wrap img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 0.4rem;
+  margin-bottom: var(--s2);
+}
+
+.location-card {
+  background-color: var(--white);
+  padding: var(--s2) var(--s3);
+  border: 1px solid var(--border);
+  border-left: 0.25rem solid var(--blue);
+  border-radius: 0.4rem;
+  box-shadow: var(--shadow);
+}
+
+.location-card-space {
+  margin-top: var(--s2);
+}
+
+.form-wrap,
+.contact-panel {
+  background-color: var(--white);
+  padding: var(--s3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--s2) var(--s3);
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+}
+
+/* message box and anything else that should go full width */
+.form-field.full {
+  grid-column: 1 / -1;
+}
+
+/* Spacing between the contact form fields (replaces the old inline styles) */
+.contact-panel .form-field {
+  margin-bottom: 0.75rem;
+}
+
+/* The Drain Clearing photo is a portrait, so this keeps the head inside the 16:9 crop */
+.card-image[src*="pexels"] {
+  object-position: center 15%;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 0.6rem 0.75rem;
+  border: 1px solid #b9c2cc;
+  border-radius: 0.3rem;
+  background-color: var(--white);
+  color: var(--text);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+textarea {
+  min-height: 7rem;
+  resize: vertical;
+}
+
+/* LIGHTBOX */
+#lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.88);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s ease;
+}
+
+#lightbox-overlay.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+#lightbox-overlay img {
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: 0.4rem;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: transparent;
+  border: none;
+  color: var(--white);
+  font-size: 2rem;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0.25rem 0.5rem;
+}
+
+.lightbox-trigger img {
+  cursor: pointer;
+}
+
+/* MAP */
+#map {
+  height: 350px;
+  width: 100%;
+  border-radius: 0.5rem;
+  margin: 1.5rem 0;
+}
+
+/* SERVICE SEARCH */
+.service-search {
+  width: 100%;
+  padding: 0.6rem 0.75rem;
+  font-family: inherit;
+  font-size: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 0.3rem;
+  margin-bottom: 1.25rem;
+  display: block;
+}
+
+.service-search:focus {
+  outline: none;
+  border-color: var(--blue);
+  box-shadow: 0 0 0 0.2rem rgba(29, 111, 214, 0.3);
+}
+
+.service-price {
+  font-weight: 700;
+  color: var(--navy);
+  margin-top: 0.5rem;
+}
+
+.no-results {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: var(--text-light);
+  padding: 2rem 0;
+}
+
+/* ACCORDION */
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.accordion-item {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.accordion-btn {
+  width: 100%;
+  text-align: left;
+  background: var(--white);
+  border: none;
+  padding: 1rem 1.25rem;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--navy);
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.accordion-btn::after {
+  content: '+';
+  font-size: 1.25rem;
+  transition: transform 0.2s;
+}
+
+.accordion-btn[aria-expanded="true"]::after {
+  content: '-';
+}
+
+.accordion-btn:hover {
+  background: var(--grey);
+}
+
+.accordion-btn:focus-visible {
+  outline: 0.2rem solid var(--focus);
+  outline-offset: -0.2rem;
+}
+
+.accordion-panel {
+  padding: 0 1.25rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.accordion-panel:not([hidden]) {
+  max-height: 500px;
+  padding: 0.75rem 1.25rem 1rem;
+}
+
+/* CONTACT FORM */
+.char-count {
+  font-weight: 400;
+  font-size: 0.85rem;
+  color: var(--text-light);
+}
+
+.char-count.is-valid {
+  color: #2e7d32;
+}
+
+/* these two are made by main.js when the form is checked */
+.error-text {
+  font-size: 0.85rem;
+}
+
+.success-banner {
+  background: #d4edda;
+  color: #155724;
+  padding: 12px 15px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  border: 1px solid #c3e6cb;
+  font-weight: 700;
+}
+
+/* SOCIAL LINKS */
+.footer-social {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--grey-200);
+  font-size: 0.9rem;
+}
+
+.footer-social a {
+  color: var(--grey-200);
+  transition: color 0.2s;
+  display: flex;
+  align-items: center;
+}
+
+.footer-social a:hover {
+  color: var(--white);
+}
+
+.footer-social a:focus-visible {
+  outline: 0.2rem solid var(--focus);
+  outline-offset: 0.15rem;
+  border-radius: 0.2rem;
+}
+
+/* phone links inside the contact cards and the urgent-job note */
+.location-card a,
+.urgent-note a {
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.location-card a:hover,
+.urgent-note a:hover {
+  color: var(--blue);
+}
+
+.urgent-note {
+  font-weight: 500;
+}
+
+/* ---------- footer ---------- */
+
+.site-footer {
+  background-color: var(--navy);
+  color: var(--grey);
+  padding: var(--s3) 0;
+  margin-top: var(--s5);
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--s3);
+  flex-wrap: wrap;
+  row-gap: 0.75rem;
+}
+
+.site-footer a {
+  text-decoration: underline;
+}
+
+/* ---------- hover, focus and active ---------- */
+
+.nav-list a:hover,
+.nav-list a.active {
+  background-color: var(--navy-light);
+}
+
+.nav-list a:active {
+  background-color: var(--blue);
+}
+
+.button:hover {
+  background-color: var(--blue-dark);
+  border-color: var(--blue-dark);
+  box-shadow: var(--shadow-big);
+}
+
+.button-secondary:hover {
+  background-color: var(--grey);
+  box-shadow: var(--shadow);
+}
+
+.button:active,
+.button-secondary:active {
+  transform: translateY(1px);
+  box-shadow: none;
+}
+
+.info-card:hover {
+  box-shadow: var(--shadow-big);
+  transform: translateY(-0.2rem);
+}
+
+.site-footer a:hover {
+  color: var(--white);
+}
+
+/* the menu button gets the same hover, focus and pressed feel as the nav links */
+.menu-toggle:hover {
+  background-color: var(--navy-light);
+}
+
+.menu-toggle:active {
+  background-color: var(--blue);
+}
+
+input:hover,
+select:hover,
+textarea:hover {
+  border-color: var(--navy-light);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--blue);
+  box-shadow: 0 0 0 0.2rem rgba(29, 111, 214, 0.3);
+}
+
+/* green or red border once the visitor has filled in or left a field
+   (:user-valid and :user-invalid only apply after the visitor has interacted,
+   so the form is not red when the page first loads) */
+input:user-valid,
+select:user-valid,
+textarea:user-valid {
+  border-color: #2e7d32;
+}
+
+input:user-invalid,
+select:user-invalid,
+textarea:user-invalid {
+  border-color: #c62828;
+}
+
+/* no extra space after the last item in a card or list */
+.info-card p:last-child,
+.location-card p:last-child,
+.hero-card-list li:last-child {
+  margin-bottom: 0;
+}
+
+/* yellow outline so keyboard users can see where they are */
+a:focus-visible,
+button:focus-visible {
+  outline: 0.2rem solid var(--focus);
+  outline-offset: 0.15rem;
+}
+
+/* ---------- responsive ---------- */
+
+/* tablet (769px to 1024px).
+   The cards stay in 3 columns here so there is never one card sitting alone
+   on the second row. They only go to one column at the mobile breakpoint. */
+@media (max-width: 1024px) {
+  html {
+    font-size: 95%;
+  }
+
+  .hero-inner {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "main"
+      "side";
+  }
+
+  .contact-grid {
+    gap: var(--s3);
+  }
+}
+
+/* mobile, everything goes into one column */
+@media (max-width: 768px) {
+  html {
+    font-size: 90%;
+  }
+
+  h1 {
+    font-size: 1.953rem;
+  }
+
+  h2 {
+    font-size: 1.563rem;
+  }
+
+  .section {
+    padding: var(--s4) 0;
+  }
+
+  /* Header: logo on the left, menu button on the right, and the nav links
+     drop onto their own full-width row underneath. */
+  .topbar {
+    flex-wrap: wrap;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .site-header nav {
+    width: 100%;
+  }
+
+  /* Without JavaScript the nav stays as an always-visible grid of big tap
+     targets, so the site still works if the script fails to load. */
+  .nav-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+  }
+
+  .nav-list a {
+    padding: 0.8rem 0.5rem;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.08);
+  }
+
+  /* main.js adds the nav-js class to the header. Only then do we show the
+     button and hide the links until the button is pressed. */
+  .nav-js .menu-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--s1);
+    padding: 0.6rem 0.9rem;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    border-radius: 0.3rem;
+    background-color: transparent;
+    color: var(--white);
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+
+  .nav-js .nav-list {
+    display: none;
+    margin-top: var(--s2);
+  }
+
+  .nav-js .nav-list.is-open {
+    display: grid;
+  }
+
+  /* The three-line icon is one bar plus two pseudo-elements above and below it. */
+  .menu-icon,
+  .menu-icon::before,
+  .menu-icon::after {
+    display: block;
+    width: 1.25rem;
+    height: 2px;
+    background-color: var(--white);
+    border-radius: 1px;
+    transition: transform 0.2s, background-color 0.2s;
+  }
+
+  .menu-icon {
+    position: relative;
+  }
+
+  .menu-icon::before,
+  .menu-icon::after {
+    content: "";
+    position: absolute;
+    left: 0;
+  }
+
+  .menu-icon::before {
+    top: -0.4rem;
+  }
+
+  .menu-icon::after {
+    top: 0.4rem;
+  }
+
+  /* When the menu is open the three lines turn into an X */
+  .menu-toggle[aria-expanded="true"] .menu-icon {
+    background-color: transparent;
+  }
+
+  .menu-toggle[aria-expanded="true"] .menu-icon::before {
+    top: 0;
+    transform: rotate(45deg);
+  }
+
+  .menu-toggle[aria-expanded="true"] .menu-icon::after {
+    top: 0;
+    transform: rotate(-45deg);
+  }
+
+  .card-grid,
+  .contact-grid,
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+  }
+
+  .hero-actions .button,
+  .hero-actions .button-secondary {
+    width: 100%;
+  }
+}
+
+/* small phones */
+@media (max-width: 480px) {
+  .container {
+    width: 94%;
+  }
+
+  .mini-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .about-media img {
+    aspect-ratio: 16 / 9;
+  }
+
+  .form-wrap,
+  .contact-panel,
+  .info-card {
+    padding: var(--s2);
+  }
+
+  /* smaller text on small phones */
+  h1 {
+    font-size: 1.563rem;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+  }
+
+  p {
+    font-size: 0.95rem;
+  }
+
+  .nav-list a,
+  .button,
+  .button-secondary {
+    font-size: 0.9rem;
+  }
+}
+
+/* no animations for people who turned them off on their device */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  * {
+    transition: none !important;
+  }
+
+  .info-card:hover,
+  .button:active,
+  .button-secondary:active {
+    transform: none;
+  }
+}
+
+/* Yellow keyboard focus outline for forms, navigation and menu controls */
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+.nav-list a:focus-visible,
+.menu-toggle:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 3px;
+}

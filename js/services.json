@@ -1,0 +1,80 @@
+[
+  {
+    "id": "pipe-repairs",
+    "name": "Pipe Repairs",
+    "description": "We diagnose and repair leaking, burst, or damaged pipework to stop water loss and protect your property from further plumbing damage.",
+    "image": "images/outside-pipe-repairs-800.jpg",
+    "srcset": "images/outside-pipe-repairs-480.jpg 480w, images/outside-pipe-repairs-800.jpg 800w, images/outside-pipe-repairs-1200.jpg 1200w",
+    "sizes": "(max-width: 768px) 90vw, (max-width: 1024px) 45vw, 350px",
+    "alt": "A plumber repairing outdoor pipework beside a house",
+    "width": 800,
+    "height": 554,
+    "price": "Call-out fee R450, repairs from R800",
+    "enquiryValue": "Pipe Repairs"
+  },
+  {
+    "id": "underground-pipework-installation",
+    "name": "Underground Pipework Installation",
+    "description": "We install new water and drainage pipework in trenches for home extensions and outbuildings, connecting new fixtures to your existing plumbing system.",
+    "image": "images/underground-pipework-800.jpg",
+    "srcset": "images/underground-pipework-480.jpg 480w, images/underground-pipework-800.jpg 800w, images/underground-pipework-1200.jpg 1200w",
+    "sizes": "(max-width: 768px) 90vw, (max-width: 1024px) 45vw, 350px",
+    "alt": "Two plumbers laying blue water pipes in a trench beside a home extension",
+    "width": 800,
+    "height": 534,
+    "price": "From R3,500",
+    "enquiryValue": "Underground Pipework Installation"
+  },
+  {
+    "id": "drain-clearing",
+    "name": "Drain Clearing",
+    "description": "Blocked drains can disrupt everyday life. We clear stubborn clogs and restore proper flow with efficient, reliable service.",
+    "image": "images/drain-clearing-blocked-drain-800.jpg",
+    "srcset": "images/drain-clearing-blocked-drain-480.jpg 480w, images/drain-clearing-blocked-drain-800.jpg 800w, images/drain-clearing-blocked-drain-1200.jpg 1200w",
+    "sizes": "(max-width: 768px) 90vw, (max-width: 1024px) 45vw, 350px",
+    "alt": "A plumber in navy work clothes feeding a drain rod into an outside drain inspection cover",
+    "width": 800,
+    "height": 533,
+    "price": "From R650",
+    "enquiryValue": "Drain Clearing"
+  },
+  {
+    "id": "bathroom-plumbing",
+    "name": "Bathroom Plumbing",
+    "description": "We handle taps, toilets, showers, and bathroom pipework, helping keep your bathroom functional, comfortable, and leak-free.",
+    "image": "images/under-sink-800.jpg",
+    "srcset": "images/under-sink-480.jpg 480w, images/under-sink-800.jpg 800w, images/under-sink-1200.jpg 1200w",
+    "sizes": "(max-width: 768px) 90vw, (max-width: 1024px) 45vw, 350px",
+    "alt": "A plumber tightening pipe fittings beneath a kitchen sink",
+    "width": 800,
+    "height": 533,
+    "price": "From R1,200",
+    "enquiryValue": "Bathroom Plumbing"
+  },
+  {
+    "id": "kitchen-plumbing",
+    "name": "Kitchen Plumbing",
+    "description": "Our team installs and repairs sinks, taps, water lines, and drainage systems to keep your kitchen running smoothly.",
+    "image": "images/kitchen-plumbing-800.jpg",
+    "srcset": "images/kitchen-plumbing-480.jpg 480w, images/kitchen-plumbing-800.jpg 800w, images/kitchen-plumbing-1200.jpg 1200w",
+    "sizes": "(max-width: 768px) 90vw, (max-width: 1024px) 45vw, 350px",
+    "alt": "A plumber connecting waste pipes under a modern kitchen sink",
+    "width": 800,
+    "height": 533,
+    "price": "From R950",
+    "enquiryValue": "Kitchen Plumbing"
+  },
+  {
+    "id": "general-maintenance",
+    "name": "General Maintenance",
+    "description": "We offer routine plumbing maintenance to catch minor issues early, reduce risk, and extend the life of your fixtures and piping.",
+    "image": "images/maintenance-800.jpg",
+    "srcset": "images/maintenance-480.jpg 480w, images/maintenance-800.jpg 800w, images/maintenance-1200.jpg 1200w",
+    "sizes": "(max-width: 768px) 90vw, (max-width: 1024px) 45vw, 350px",
+    "alt": "A plumber checking household pipe joints and a pressure gauge in a utility room",
+    "width": 800,
+    "height": 533,
+    "price": "Call-out fee R450, hourly rate R380",
+    "enquiryValue": "General Maintenance"
+  }
+]
