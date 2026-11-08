@@ -236,11 +236,12 @@ The photographs listed below are AI-generated images created with Google Gemini 
 | A plumber fitting new pipework in a trench beside a house | Home page hero | Gemini AI, 31 Oct 2026 |
 | A plumber repairing outdoor pipework beside a house | Home page; Services (Pipe Repairs) | Gemini AI, 31 Oct 2026 |
 | Two plumbers laying pipework beside a home extension | Services (Underground Pipework Installation) | Gemini AI, 31 Oct 2026 |
-| `bathroom-plumbing.jpg`: A plumber fitting a new tap on a white bathroom basin | Home page; Contact page; Services (Bathroom Plumbing) | Gemini AI, 31 Oct 2026 |
+| A plumber working beneath a kitchen sink | Home page | Gemini AI, 31 Oct 2026 |
 | A plumber connecting pipes under a kitchen sink | Services (Kitchen Plumbing) | Gemini AI, 31 Oct 2026 |
 | A plumber checking pipes and a pressure gauge | About page; Services (General Maintenance) | Gemini AI, 31 Oct 2026 |
 | A plumber shaking hands with a homeowner | Home page; About page | Gemini AI, 31 Oct 2026 |
 | A close-up of a plumber cutting copper pipe | Home page; About page gallery | Gemini AI, 31 Oct 2026 |
+| `bathroom-plumbing.jpg`: A plumber fitting a new tap on a white bathroom basin | Contact page; Services (Bathroom Plumbing) | Gemini AI, 31 Oct 2026 |
 | A plumber clearing a blocked outdoor drain | Services (Drain Clearing) | Gemini AI, 31 Oct 2026 |
 ---
 
@@ -276,7 +277,7 @@ The detailed changelog tables are maintained in [CHANGELOG.md](CHANGELOG.md).
 
 Gemini (2026) *AI-generated underground pipework photograph* [AI-generated image]. Prompt: "Two plumbers laying blue water pipes in a trench at the side of a home extension, new bricks in the background. Realistic photograph, natural daylight, shallow depth of field, 3:2 landscape, no text, no logos, no watermark, South African home setting." Google Gemini. Available at: https://share.gemini.google/YHfzgqyoMhAw (Generated: 31 October 2026).
 
-Gemini (2026) *AI-generated bathroom plumbing photograph* [AI-generated image]. Prompt: "A plumber fitting a new tap on a white bathroom basin in a clean half-renovated bathroom, tiles on the wall behind him and plumbing tools laid out on the floor beside him. Realistic photograph, natural daylight, shallow depth of field, 3:2 landscape, no text, no logos, no watermark, South African home setting." Google Gemini. Available at: https://share.gemini.google/YHfzgqyoMhAw (Generated: 31 October 2026).
+Gemini (2026) *AI-generated under-sink repair photograph* [AI-generated image]. Prompt: "A plumber kneeling under a kitchen sink, tightening a pipe fitting with a wrench, a bucket beside him. Realistic photograph, natural daylight, shallow depth of field, 3:2 landscape, no text, no logos, no watermark, South African home setting." Google Gemini. Available at: https://share.gemini.google/YHfzgqyoMhAw (Generated: 31 October 2026).
 
 Gemini (2026) *AI-generated outside pipe repair photograph* [AI-generated image]. Prompt: "A plumber in a navy work shirt fitting new grey PVC pipework in a trench in red soil beside a house, tools on the ground. Realistic photograph, natural daylight, shallow depth of field, 3:2 landscape, no text, no logos, no watermark, South African home setting." Google Gemini. Available at: https://share.gemini.google/YHfzgqyoMhAw (Generated: 31 October 2026).
 
@@ -288,7 +289,7 @@ Gemini (2026) *AI-generated copper pipe cutting photograph* [AI-generated image]
 
 Gemini (2026) *AI-generated customer and plumber photograph* [AI-generated image]. Prompt: "A friendly plumber in uniform shaking hands with a homeowner at the front door, toolbag at his feet. Realistic photograph, natural daylight, shallow depth of field, 3:2 landscape, no text, no logos, no watermark, South African home setting." Google Gemini. Available at: https://share.gemini.google/YHfzgqyoMhAw (Generated: 31 October 2026).
 
-Gemini (2026) *AI-generated bathroom plumbing photograph* [AI-generated image]. Prompt: "A plumber fitting a tap on a white basin in a clean, half-renovated bathroom, tiles and tools nearby. Realistic photograph, natural daylight, shallow depth of field, 3:2 landscape, no text, no logos, no watermark, South African home setting." Google Gemini. Available at: https://share.gemini.google/YHfzgqyoMhAw (Generated: 31 October 2026).
+Gemini (2026) *AI-generated bathroom plumbing photograph* [AI-generated image]. Prompt: "A plumber fitting a new tap on a white bathroom basin in a clean half-renovated bathroom, tiles on the wall behind him and plumbing tools laid out on the floor beside him. Realistic photograph, natural daylight, shallow depth of field, 3:2 landscape, no text, no logos, no watermark, South African home setting." Google Gemini. Available at: https://share.gemini.google/YHfzgqyoMhAw (Generated: 31 October 2026).
 
 Gemini (2026) *AI-generated drain clearing photograph* [AI-generated image]. Prompt: "A plumber in a navy work shirt clearing a blocked drain outside a South African home, feeding a drain rod into an open inspection cover, a bucket and drain rods on the ground beside him. Realistic photograph, natural daylight, shallow depth of field, 3:2 landscape, no text, no logos, no watermark." Google Gemini. Available at: https://share.gemini.google/YHfzgqyoMhAw (Generated: 31 October 2026).
 
