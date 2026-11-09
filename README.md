@@ -185,3 +185,15 @@ New Target, Inc. (2025) *Color Psychology in Website Design*. Available at: http
 ProCompare (n.d.) *Beyond the build: a 3-year forecast of your website's true running costs in South Africa*. Available at: https://www.procompare.co.za/articles/digital-marketing-seo-services/website-running-costs (Accessed: 4 October 2026).
 
 Truehost (2024) *Guide To Cost Of Hosting A Website In South Africa*. Available at: https://truehost.co.za/cost-of-hosting-website-south-africa/ (Accessed: 4 October 2026).
+
+Agafonkin, V. (n.d.) *Leaflet — an open-source JavaScript library for mobile-friendly interactive maps*. Available at: https://leafletjs.com (Accessed: 5 October 2026).
+
+MDN Web Docs (n.d.i) *aria-expanded*. Available at: https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-expanded (Accessed: 5 October 2026).
+
+MDN Web Docs (n.d.j) *Using the Fetch API*. Available at: https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch (Accessed: 5 October 2026).
+
+MDN Web Docs (n.d.k) *loading attribute — lazy loading*. Available at: https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/loading (Accessed: 5 October 2026).
+
+OpenStreetMap (n.d.) *About OpenStreetMap*. Available at: https://www.openstreetmap.org/about (Accessed: 5 October 2026).
+
+W3C (2018) *Web Content Accessibility Guidelines (WCAG) 2.1*. Available at: https://www.w3.org/TR/WCAG21/ (Accessed: 5 October 2026).
