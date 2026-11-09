@@ -276,7 +276,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   const enquiryForm = document.getElementById('enquiryForm');
   if (enquiryForm) {
-    enquiryForm.addEventListener('submit', async function (event) {
+    enquiryForm.addEventListener('submit', function (event) {
       event.preventDefault();
 
       const name = document.getElementById('name');
@@ -331,22 +331,18 @@ document.addEventListener('DOMContentLoaded', function () {
       const selectedService = service.value;
       const customerName = name.value.trim();
       const selectedPrice = pricingLookup[selectedService] || 'Price on request';
-      const formData = new FormData(enquiryForm);
-
-      try {
-        await fetch('https://httpbin.org/post', {
-          method: 'POST',
-          body: formData
+      emailjs.sendForm("YOUR_SERVICE_ID", "YOUR_ENQUIRY_TEMPLATE_ID", enquiryForm)
+        .then(function () {
+          showSuccessAlert(
+            enquiryForm,
+            'Thank you, ' + customerName + '! Your enquiry for ' + selectedService + ' has been received. Estimated pricing: ' + selectedPrice + '. We will contact you within 24 hours to confirm your booking. For urgent jobs call 031 456 7890.'
+          );
+          enquiryForm.reset();
+        })
+        .catch(function (error) {
+          console.error('EmailJS enquiry form submission failed:', error);
+          showFieldError(name, 'Your enquiry could not be sent. Please try again later.');
         });
-      } catch (error) {
-        // The request can fail, but the user still needs the success response.
-      }
-
-      showSuccessAlert(
-        enquiryForm,
-        'Thank you, ' + customerName + '! Your enquiry for ' + selectedService + ' has been received. Estimated pricing: ' + selectedPrice + '. We will contact you within 24 hours to confirm your booking. For urgent jobs call 031 456 7890.'
-      );
-      enquiryForm.reset();
     });
   }
 
@@ -418,17 +414,18 @@ document.addEventListener('DOMContentLoaded', function () {
         return;
       }
 
-      const nameValue = nameInput.value.trim();
-      const messageType = messageTypeInput.value;
-      const messageValue = messageInput.value.trim();
-      const mailtoLink = 'mailto:info@thabosplumbing.co.za?subject=' + encodeURIComponent(messageType + ' from ' + nameValue) + '&body=' + encodeURIComponent(messageValue);
-
-      window.location.href = mailtoLink;
-      showSuccessAlert(contactForm, 'Your message has been prepared. Your email app should open now. If it does not open, please email us directly at info@thabosplumbing.co.za.');
-      contactForm.reset();
-      if (charCount && contactTextarea) {
-        updateCharCount();
-      }
+      emailjs.sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", contactForm)
+        .then(function () {
+          showSuccessAlert(contactForm, 'Your message has been sent. We will get back to you as soon as possible.');
+          contactForm.reset();
+          if (charCount && contactTextarea) {
+            updateCharCount();
+          }
+        })
+        .catch(function (error) {
+          console.error('EmailJS contact form submission failed:', error);
+          showFieldError(nameInput, 'Your message could not be sent. Please try again later.');
+        });
     });
   }
 });
