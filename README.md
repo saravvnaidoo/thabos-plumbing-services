@@ -63,8 +63,8 @@ A five-page responsive website for Thabo's Plumbing Services, a small plumbing b
 - Gallery lightbox
 - Interactive Leaflet map
 - Dynamic service cards from `services.json` with search and filter
-- Enquiry form with inline validation and success message
-- Contact form with inline validation
+- Enquiry form with inline validation; submissions go to the `httpbin.org/post` test endpoint and display a success message. This does not deliver an email.
+- Contact form with inline validation; submission opens a prefilled `mailto:` link in the visitor's default email app rather than sending directly from the site.
 - Unique title tags, meta descriptions and meta keywords on all pages
 - Descriptive image filenames and alt text
 - `robots.txt` and `sitemap.xml`
@@ -95,8 +95,7 @@ A five-page responsive website for Thabo's Plumbing Services, a small plumbing b
 ---
 
 ## Deployment
-Hosted on Vercel. All five pages deploy and load without errors.  
-Live site: https://thabos-plumbing-services.vercel.app/index.html
+Hosted on Vercel: [View the live site](https://thabos-plumbing-services.vercel.app/index.html).
 
 ---
 
