@@ -1,11 +1,10 @@
 # Thabo's Plumbing Services
 
-[![Live Site](https://img.shields.io/badge/Live%20Site-Visit-0b3c5d?style=flat&logo=vercel&logoColor=white)](https://thabos-plumbing-services.vercel.app/index.html)
+[![Live Site](https://img.shields.io/badge/Deployed%20on-Vercel-000000?style=flat&logo=vercel&logoColor=white)](https://thabos-plumbing-services.vercel.app/index.html)
 ![Module](https://img.shields.io/badge/Module-WEDE5020-1457b2?style=flat)
-![Part](https://img.shields.io/badge/Part-2-1d6fd6?style=flat)
+![Assignment](https://img.shields.io/badge/Assignment-POE-0b3c5d?style=flat)
 ![Pages](https://img.shields.io/badge/Pages-5-0b3c5d?style=flat)
 ![Services](https://img.shields.io/badge/Services-6-1d6fd6?style=flat)
-![Mark](https://img.shields.io/badge/Part%201%20Mark-97%2F100-2ecc71?style=flat)
 
 | **Details** | **Information** |
 |---|---|
